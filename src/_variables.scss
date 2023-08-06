@@ -1,3 +1,8 @@
 $primary: rgb(0, 30, 80);
 
-$font-family-sans-serif: system-ui, -apple-system, "Helvetica Neue";
+$font-size-base: 0.875rem;
+$font-family: system-ui, -apple-system, "Open Sans", "sans-serif";
+
+$accordion-button-bg: var(--bs-light);
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: var(--bs-white);

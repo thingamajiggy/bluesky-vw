@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -15,9 +19,17 @@
   </head>
   <body>
     <header class="vh-100">
-      <nav class="navbar navbar-expand-lg bg-body-primary fixed-top bg-opacity-50">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img class="vw-footer-main-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg" /></a>
+      <nav
+        id="vw-navbar"
+        class="navbar navbar-expand-lg bg-body-primary fixed-top vw-navbar"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              class="vw-navbar-main-logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -29,11 +41,22 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="vw-navbar">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Pricing</a>
+          <div class="collapse navbar-collapse d-flex" id="vw-navbar">
+            <div class="navbar-nav d-flex me-auto p-2 fw-semibold">
+              <a class="nav-link text-primary" aria-current="page" href="#"
+                >New Models</a
+              >
+              <a class="nav-link text-primary" href="#">Electric and Hybrid</a>
+              <a class="nav-link text-primary" href="#">Used Cars</a>
+              <a class="nav-link text-primary" href="#">Others</a>
+            </div>
+            <div class="navbar-nav d-flex justify-content-around w-15">
+              <a class="nav-link text-primary" href=""
+                ><i class="fa-solid fa-user"></i
+              ></a>
+              <a href="" class="nav-link text-primary"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -46,43 +69,28 @@
         <div class="carousel-inner h-100">
           <div class="carousel-item active h-100 vw-header-slide-1">
             <div class="vw-header-slide-inner h-100">
-              <div class="container p-5 bg-light rounded-3 bg-opacity-50 lh-lg">
-                <h2 class="fw-bold display-3 text-primary">E Golf Promo 1</h1>
-                <p class="fs-6 text-primary lh-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
-                <button class="btn btn-outline-primary btn-lg">
-                  Register Interest
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item h-100 vw-header-slide-2">
-            <div class="vw-header-slide-inner h-100">
-              <div class="container p-5 bg-light rounded-3 bg-opacity-50 lh-lg">
-                <h2 class="fw-bold display-3 text-primary">E Golf Promo 1</h1>
-                <p class="fs-6 text-primary lh-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
-                <button class="btn btn-outline-primary btn-lg">
-                  Register Interest
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item h-100 vw-header-slide-3">
-            <div class="vw-header-slide-inner h-100">
-              <div class="container p-5 rounded-3 bg-light bg-opacity-50 lh-lg">
-                <h2 class="fw-bold display-3 text-primary">E Golf Promo 1</h1>
-                <p class="fs-6 text-primary lh-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
-                <button class="btn btn-outline-primary btn-lg">
-                  Register Interest
-                </button>
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col-xs-12 col-md-8 col-lg-5 p-5 bg-primary rounded-3 bg-opacity-50 lh-lg"
+                  >
+                    <p class="fs-5 fw-light text-light lh-sm mb-0">
+                      Introducing
+                    </p>
+                    <h1 class="fw-bold display-3 text-light">E-Golf</h1>
+                    <p class="fs-4 fw-light text-light lh-sm mb-4">
+                      The New Volkswagen Electric Car
+                    </p>
+                    <button
+                      class="btn btn-outline-light me-3"
+                      data-bs-toggle="modal"
+                      data-bs-target="#vw-discover"
+                    >
+                      Discover
+                    </button>
+                    <button class="btn btn-light">Register Interest</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -90,45 +98,258 @@
       </div>
     </header>
     <main class="mt-5">
+      <section class="container mt-5"></section>
+      <section class="container mt-5">
+        <h2 class="d-flex justify-content-center display-5 fw-bold mb-5">
+          Find your e-Golf
+        </h2>
+        <div class="row">
+          <div class="col-xs-12 col-md-4 text-center mb-3">
+            <div class="card-body">
+              <h5 class="card-title display-6 mb-3">
+                <i class="fa-solid fa-car"></i>
+              </h5>
+              <h6 class="card-text text-primary mb-4">Find a New Car</h6>
+              <a
+                href="#"
+                class="btn btn-outline-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#vw-search-address"
+                >Search now</a
+              >
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 text-center mb-3">
+            <div class="card-body">
+              <h5 class="card-title display-6 mb-3">
+                <i class="fa-solid fa-car-on"></i>
+              </h5>
+              <h6 class="card-text text-primary mb-4">Find a Used Car</h6>
+              <button
+                href="#"
+                class="btn btn-outline-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#vw-search-address"
+              >
+                Search now
+              </button>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 text-center mb-3">
+            <div class="card-body">
+              <h5 class="card-title display-6 mb-3">
+                <i class="fa-solid fa-cart-plus"></i>
+              </h5>
+              <h6 class="card-text text-primary mb-4">Check your Price</h6>
+              <a href="#" class="btn btn-outline-primary">Search now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container mt-5">
+        <div class="row">
+          <div class="col">
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="w-100"
+                src="https://youtube.com/embed/YqhU8tcS1Cg?autoplay=1&mute=1"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container mt-5">
+        <div class="row">
+          <div class="col-xs-12 mb-5">
+            <h2 class="d-flex justify-content-center display-5 fw-bold">
+              Discover e-Golf
+            </h2>
+            <h5 class="text-muted d-flex justify-content-center">Design</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div
+              class="card border-0 shadow bg-body rounded vw-card-animation overflow-hidden h-100"
+            >
+              <div class="vw-background-effect"></div>
+              <div class="pic">
+                <img
+                  src="https://assets.volkswagen.com/is/image/volkswagenag/new_cars-e_golf-exterior-4_3-2500x1865?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTI0MDAmaGVpPTE4MDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmMTBiZg=="
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h-1 mt-4">Exterior</h5>
+                <p class="card-text text-muted mt-3">
+                  The e‑Golf retains the classic styling of the Golf, with its
+                  own electric twist. LED headlights, C-shaped running lights
+                  and signature blue flash across the front grille.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div
+              class="card border-0 shadow bg-body rounded vw-card-animation overflow-hidden h-100"
+            >
+              <div class="vw-background-effect"></div>
+              <div class="pic">
+                <img
+                  src="https://assets.volkswagen.com/is/image/volkswagenag/new_cars-e_golf-interior-4_3-2500x1865?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTI0MDAmaGVpPTE4MDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmMTBiZg=="
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h-1 mt-4">Interior</h5>
+                <p class="card-text text-muted mt-3">
+                  The surprisingly spacious interior of the e‑Golf combines
+                  style, practicality and comfort with unique touches like the
+                  electric blue stitching on the leather-wrapped steering wheel.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div
+              class="card border-0 shadow bg-body rounded vw-card-animation overflow-hidden h-100"
+            >
+              <div class="vw-background-effect"></div>
+              <div class="pic">
+                <img
+                  src="https://assets.volkswagen.com/is/image/volkswagenag/new_cars-e_golf-lights-4_3-2500x1865?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTI0MDAmaGVpPTE4MDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmMTBiZg=="
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h-1 mt-4">Lights</h5>
+                <p class="card-text text-muted mt-3">
+                  The e‑Golf's highly efficient LED headlights use far less
+                  energy than conventional headlights, with no compromise on
+                  brightness.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div
+              class="card border-0 shadow bg-body rounded vw-card-animation overflow-hidden h-100"
+            >
+              <div class="vw-background-effect"></div>
+              <div class="pic">
+                <img
+                  src="https://assets.volkswagen.com/is/image/volkswagenag/new_cars-e_golf-wheels-4_3-2500x1865?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTI0MDAmaGVpPTE4MDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmMTBiZg=="
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h-1 mt-4">Wheels</h5>
+                <p class="card-text text-muted mt-3">
+                  The 16-inch ‘Tileve’ alloy wheels have been specially built to
+                  be extra-aerodynamic. The reduced drag means they actually
+                  help the car save energy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="container mt-5">
         <div class="card mb-3">
-          <div class="row vw-info-card-row">
-            <div class="col-md-4 h-100">
-              <img src="https://images.unsplash.com/photo-1566348103654-df045b5cf027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHZvbGtzd2FnZW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" class="img-fluid rounded-start object-fit-cover h-100 w-100" alt="E-VW Promo - Car Driving">
+          <div class="row vw-info-card-row g-0">
+            <div class="col-md-4 h-100 vw-info-card-col-lhs position-relative">
+              <img
+                src="https://assets.volkswagen.com/is/image/volkswagenag/new_cars-e_golf-exterior-4_3-2500x1865?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTI0MDAmaGVpPTE4MDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmMTBiZg=="
+                class="img-fluid rounded-start object-fit-cover h-100 w-100"
+                alt="E-VW Promo - Car Driving"
+              />
             </div>
             <div class="col-md-8 d-flex align-items-center h-100">
               <div class="card-body">
-                <h5 class="card-title fw-bold display-4">Info 1</h5>
-                <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="mb-3">
+                  <h5 class="card-title fw-bold display-5">
+                    Driver assistance
+                  </h5>
+                  <h5 class="text-muted">e-Technology</h5>
+                </div>
+                <p class="card-text fs-6">
+                  The e‑Golf features the full suite of Volkswagen driver
+                  assistance, including Adaptive Cruise Control, Front Assist,
+                  Blind Spot Sensor, Park Assist, Traffic Jam Assist and
+                  Emergency Assist to bring the car to a controlled stop if you
+                  are unable to.
+                </p>
+                <button type="button" class="btn btn-outline-primary">
+                  Find out more
+                </button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="card mt-5">
-          <div class="row vw-info-card-row">
+          <div class="row vw-info-card-row g-0">
             <div class="col-md-8 d-flex align-items-center h-100">
               <div class="card-body">
-                <h5 class="card-title fw-bold display-4">Info 2</h5>
-                <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="mb-3">
+                  <h5 class="card-title fw-bold display-5">Comfort</h5>
+                  <h5 class="text-muted">High-spec tech. Total comfort.</h5>
+                </div>
+                <p class="card-text fs-6">
+                  The e‑Golf provides for comfort, convenience and style. The
+                  cabin is climate controlled and the fully adjustable front
+                  seats offer lumber support as standard. Also available in
+                  leather.
+                </p>
+                <p class="card-text fs-6">
+                  The e‑Golf's Car Net Mirrorlink system makes your Android and
+                  Apple entertainment apps available on your dashboard, while
+                  the Active Info Display delivers navigation instructions in
+                  the driver's eyeline, directly behind the steering wheel.
+                </p>
               </div>
             </div>
-            <div class="col-md-4 h-100">
-              <img src="https://images.unsplash.com/photo-1550517636-ad7bac40dc28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" class="img-fluid rounded-start object-fit-cover h-100 w-100" alt="E-VW Promo - Car Driving">
+            <div class="col-md-4 h-100 vw-info-card-col-rhs position-relative">
+              <img
+                src="https://assets.volkswagen.com/is/image/volkswagenag/new_cars-e_golf-technology_high_spec-4_3-2500x1865?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTI0MDAmaGVpPTE4MDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmMTBiZg=="
+                class="img-fluid rounded-end object-fit-cover h-100 w-100"
+                alt="E-VW Promo - Car Driving"
+              />
             </div>
           </div>
         </div>
-
         <div class="card mt-5">
-          <div class="row vw-info-card-row">
-            <div class="col-md-4 h-100">
-              <img src="https://images.unsplash.com/photo-1591230740238-e9a71182b67c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1325&q=80" class="img-fluid rounded-start object-fit-cover h-100 w-100" alt="E-VW Promo - Car Driving">
+          <div class="row vw-info-card-row g-0">
+            <div class="col-md-4 h-100 vw-info-card-col-lhs position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                class="img-fluid rounded-start object-fit-cover h-100 w-100"
+                alt="E-VW Promo - Car Driving"
+              />
             </div>
             <div class="col-md-8 d-flex align-items-center h-100">
               <div class="card-body">
-                <h5 class="card-title fw-bold display-4">Info 3</h5>
-                <p class="card-text fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-             
+                <div class="mb-3">
+                  <h5 class="card-title fw-bold display-5">
+                    Financial Service
+                  </h5>
+                  <h5 class="text-muted">Finance & Lease</h5>
+                </div>
+                <p class="card-text fs-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <button type="button" class="btn btn-outline-primary">
+                  Find out more
+                </button>
               </div>
             </div>
           </div>
@@ -136,15 +357,26 @@
       </section>
       <section class="container-fluid text-bg-dark text-center my-5">
         <div class="row text-bg-primary">
+          <!-- <div class="col position-relative vw-info-card-col-lhs">
+            <img
+              src="https://images.unsplash.com/photo-1539067574597-48a3a87d7c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              class="img-fluid object-fit-cover"
+              alt=""
+            />
+          </div> -->
           <div class="col">
             <div class="p-5">
-              <h2 class="display-5 fw-bold">
-                Register your Interest Today  
+              <h2 class="display-5 fw-bold mb-4">
+                Register your Interest Today
               </h2>
-              <p class="fs-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              <p class="fs-6 mb-4">
+                Please request a call back from your prefered Volkswagen
+                Retailer. We will help you match all your preference
               </p>
-              <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#vw-register-interest">
+              <button
+                id="vw-open-register-modal"
+                class="btn btn-lg btn-outline-light"
+              >
                 Register
               </button>
             </div>
@@ -154,43 +386,85 @@
       <section class="container">
         <div class="row">
           <div class="col">
-            <h2 class="fw-bold display-5 my-2">
-              FAQs
+            <h2 class="fw-bold display-5 my-2 mb-5">
+              Frquently Asked Questions
             </h2>
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    What is the current lead time/delivery time for e-Golf
+                    Volkswagen?
                   </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    Each of our different models, trims and engines have
+                    different delivery times. The best way to find out what the
+                    delivery time is for the vehicle you want is to contact your
+                    local
+                    <a>Volkswagen retailer.</a>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Does Volkswagen provide insurance?
                   </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    Yes, we offer a number of insurance packages. Please take a
+                    look at the <a>Volkswagen Insurance</a> page to find out
+                    more.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Does Volkswagen provide insurance?
                   </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    Yes, we offer a number of insurance packages. Please take a
+                    look at the <a>Volkswagen Insurance</a>paeg to find out
+                    more.
                   </div>
                 </div>
               </div>
@@ -200,163 +474,302 @@
       </section>
     </main>
     <footer class="container-fluid bg-light text-primary">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top">
-        <div class="col mb-3 d-flex align-items-center justify-content-center flex-column">
-          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-            <img class="vw-footer-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg" />
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top"
+      >
+        <div
+          class="col mb-3 d-flex align-items-center justify-content-center flex-column"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+          >
+            <img
+              class="vw-footer-logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg"
+            />
           </a>
           <small>2023</small>
         </div>
         <div class="col mb-3">
-          <h5>Footer Title 1</h5>
+          <h5>Explore Volkswagen</h5>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Home</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Features</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Price</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0" href="#">FAQs</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0" href="#">About</a></li>
+            <li class="nav-item mb-2 fs-6">
+              <a class="nav-link p-0" href="#">Browse the range</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Fleet</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Technology</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Environment</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Partnering with Volkswagen</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Careers</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Service & parts</a>
+            </li>
           </ul>
         </div>
         <div class="col mb-3">
-            <h5>Footer Title 1</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Home</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Features</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Price</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">FAQs</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">About</a></li>
-            </ul>
+          <h5>Popular models</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Golf</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Polo</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">ID.4</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Tiguan</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Commercial vehicles</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Used cars</a>
+            </li>
+          </ul>
         </div>
         <div class="col mb-3">
-            <h5>Footer Title 1</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Home</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Features</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Price</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">FAQs</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">About</a></li>
-            </ul>
+          <h5>Useful tools</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Book a test drive</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Book a Service or MOT online</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Finance calculator</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Find a retailer</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Request a quote</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Company car tax calculator</a>
+            </li>
+          </ul>
         </div>
         <div class="col mb-3">
-            <h5>Footer Title 1</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Home</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Features</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Price</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">FAQs</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0" href="#">About</a></li>
-            </ul>
+          <h5>Social</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">TikTok</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Facebook</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Twitter</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">Instagram</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0" href="#">YouTube</a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
     <script src="/main.js"></script>
   </body>
 
-  <div class="modal fade" id="vw-register-interest" tabindex="-1" aria-labelledby="vw-register-interest-title" aria-hidden="true">
+  <div
+    class="modal fade"
+    id="vw-discover"
+    tabindex="-1"
+    aria-labelledby="vw-discover-title"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title fs-5" id="vw-discover-title">
+            Volkswagen Spec Checks
+          </div>
+        </div>
+        <div class="modal-body">
+          <div
+            class="d-flex justify-content-between border border-primary p-3 rounded-pill mb-3"
+          >
+            <span class="fw-lighter"
+              ><i class="fa-solid fa-circle-exclamation"></i> Electric
+              range</span
+            >
+            <span class="fw-light">144 miles(WLTP)</span>
+          </div>
+          <div
+            class="d-flex justify-content-between border border-primary p-3 rounded-pill mb-3"
+          >
+            <span class="fw-lighter"
+              ><i class="fa-solid fa-circle-exclamation"></i> Charging time AC
+              2.3KW</span
+            >
+            <span class="fw-light">17:00 hours (0-100%)</span>
+          </div>
+          <div
+            class="d-flex justify-content-between border border-primary p-3 rounded-pill mb-3"
+          >
+            <span class="fw-lighter"
+              ><i class="fa-solid fa-circle-exclamation"></i> Charging time AC
+              3.6KW</span
+            >
+            <span class="fw-light">10:50 hours (0-100%)</span>
+          </div>
+          <div
+            class="d-flex justify-content-between border border-primary p-3 rounded-pill mb-3"
+          >
+            <span class="fw-lighter"
+              ><i class="fa-solid fa-circle-exclamation"></i> Charging time AC
+              40KW</span
+            >
+            <span class="fw-light">45 mins (0-100%) </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="vw-search-address"
+    tabindex="-1"
+    aria-labelledby="vw-search-address-title"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="vw-search-address-title">
+            Set your e-Golf Location
+          </h2>
+        </div>
+        <div class="modal-body">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Enter Postcard"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              <i class="fa-regular fa-compass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="vw-register-interest"
+    tabindex="-1"
+    aria-labelledby="vw-register-interest-title"
+    aria-hidden="true"
+  >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="vw-register-interest-title">Register Interest</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h2 class="modal-title fs-5" id="vw-register-interest-title">
+            Register Interest
+          </h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body">
-          <p>
-            Just leave your contact details below and a Volkswagen expert from your chosen Retailer will be in touch to help you with any questions that you might have.
-          </p>
-          <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-4">
-              <label for="validationCustom01" class="form-label"
-                >First name</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom01"
-                value="First name"
-                required
-              />
-              <div class="valid-feedback">Looks good!</div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <p>
+                  Just leave your contact details below and a Volkswagen expert
+                  from your chosen Retailer will be in touch to help you with
+                  any questions that you might have.
+                </p>
+              </div>
             </div>
-            <div class="col-md-4">
-              <label for="validationCustom02" class="form-label">Last name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom02"
-                value="Last name"
-                required
-              />
-              <div class="valid-feedback">Looks good!</div>
-            </div>
-            <div>
-              <h5>Contact details</h5>
-            </div>
-            <div class="col-md-4">
-              <label for="validationCustomUsername" class="form-label"
-                >Username</label
-              >
-              <div class="input-group has-validation">
-                <span class="input-group-text" id="inputGroupPrepend">@</span>
+
+            <form class="row needs-validation" novalidate>
+              <div class="col-md-6">
+                <label for="vw-first-name" class="form-label">First name</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="validationCustomUsername"
-                  aria-describedby="inputGroupPrepend"
+                  id="vw-first-name"
+                  name="vw-first-name"
                   required
                 />
-                <div class="invalid-feedback">Please choose a username.</div>
+                <div class="valid-feedback">Looks good!</div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <label for="validationCustom03" class="form-label">City</label>
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom03"
-                required
-              />
-              <div class="invalid-feedback">Please provide a valid city.</div>
-            </div>
-            <div class="col-md-3">
-              <label for="validationCustom04" class="form-label">State</label>
-              <select class="form-select" id="validationCustom04" required>
-                <option selected disabled value="">Choose...</option>
-                <option>...</option>
-              </select>
-              <div class="invalid-feedback">Please select a valid state.</div>
-            </div>
-            <div class="col-md-3">
-              <label for="validationCustom05" class="form-label">Zip</label>
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom05"
-                required
-              />
-              <div class="invalid-feedback">Please provide a valid zip.</div>
-            </div>
-            <div class="col-12">
-              <div class="form-check">
+              <div class="col-md-6">
+                <label for="vw-last-name" class="form-label">Last name</label>
                 <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="invalidCheck"
+                  type="text"
+                  class="form-control"
+                  id="vw-last-name"
+                  name="vw-last-name"
                   required
                 />
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-12 mt-3">
+                <label class="form-label" for="vw-email"> Email </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="vw-email"
+                  name="vw-email"
+                  required
+                />
+              </div>
+              <div class="col-12 mt-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="vw-terms-check"
+                    required
+                  />
+                  <label class="form-check-label" for="vw-terms-check">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button id="vw-submit-register" type="button" class="btn btn-primary">
+            Submit
+          </button>
         </div>
       </div>
     </div>

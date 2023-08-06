@@ -1,3 +1,89 @@
-.vw-info-card-row {
-  height: 300px;
+.vw-info-card {
+  &-row {
+    height: 300px;
+  }
+
+  &-col {
+    &-lhs::after,
+    &-rhs::after {
+      background: $primary;
+      content: "";
+      left: 0;
+      height: 100%;
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &-col-lhs::after {
+    border-radius: var(--bs-border-radius) 0 0 var(--bs-border-radius);
+  }
+
+  &-col-rhs::after {
+    border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
+  }
+}
+
+.vw-register-alert {
+  bottom: 20px;
+  position: fixed;
+  right: 20px;
+}
+
+.vw-card-animation {
+  transition: all 0.5s ease;
+
+  .vw-background-effect {
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+  }
+
+  &:hover {
+    color: $white;
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+
+    .text-muted {
+      color: $white !important;
+    }
+  }
+
+  &:hover .vw-background-effect {
+    bottom: 0;
+    height: 320px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: $primary;
+    animation: pop-background 0.3s ease-in;
+  }
+}
+
+@keyframes pop-background {
+  0% {
+    height: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
+  50% {
+    height: 80px;
+    border-top-left-radius: 75%;
+    border-top-right-radius: 75%;
+  }
+
+  75% {
+    height: 160px;
+    border-top-left-radius: 85%;
+    border-top-right-radius: 85%;
+  }
+
+  100% {
+    height: 320px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+  }
 }

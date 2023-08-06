@@ -1,3 +1,11 @@
+.vw-navbar {
+  transition: 0.4s;
+
+  &-main-logo {
+    max-width: 30px;
+  }
+}
+
 .vw-header-slide {
   &-1,
   &-2,
@@ -28,7 +36,6 @@
 .vw-footer-main-logo {
   max-width: 50px;
 }
-
 
 // .arrow-position {
 //   position: absolute;
