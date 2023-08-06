@@ -1,3 +1,19 @@
+.vw-mobile-img-rhs {
+  border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
+
+  @media only screen and (min-width: map-get($grid-breakpoints, "md")) {
+    border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
+  }
+}
+
+.vw-mobile-img-lhs {
+  border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+
+  @media only screen and (min-width: map-get($grid-breakpoints, "md")) {
+    border-radius: var(--bs-border-radius) 0 0 var(--bs-border-radius);
+  }
+}
+
 .vw-info-card {
   @media only screen and (min-width: map-get($grid-breakpoints, "md")) {
     &-row {
@@ -20,11 +36,19 @@
   }
 
   &-col-lhs::after {
-    border-radius: var(--bs-border-radius) 0 0 var(--bs-border-radius);
+    border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+
+    @media only screen and (min-width: map-get($grid-breakpoints, "md")) {
+      border-radius: var(--bs-border-radius) 0 0 var(--bs-border-radius);
+    }
   }
 
   &-col-rhs::after {
-    border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
+    border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
+
+    @media only screen and (min-width: map-get($grid-breakpoints, "md")) {
+      border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
+    }
   }
 }
 
