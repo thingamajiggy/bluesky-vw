@@ -1,5 +1,10 @@
 .vw-navbar {
+  background: $light;
   transition: 0.4s;
+
+  @media only screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    background: transparent;
+  }
 
   &-main-logo {
     max-width: 30px;

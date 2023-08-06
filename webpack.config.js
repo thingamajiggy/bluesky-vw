@@ -1,6 +1,8 @@
-const path = require('path')
-const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: "./src/index.js",
@@ -9,7 +11,12 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    {
+                    process.env.NODE_ENV === 'production' ? {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            esModule: false,
+                        }
+                    } : {
                         // Adds CSS to the DOM by injecting a `<style>` tag
                         loader: 'style-loader'
                     },
@@ -42,15 +49,23 @@ module.exports = {
         clean: true,
     },
     devServer: {
+        devMiddleware: {
+            writeToDisk: true,
+        },
         static: {
             directory: path.resolve(__dirname, 'dist'),
             serveIndex: true,
         },
         port: 8080,
-        hot: true
+        hot: true,
     },
     plugins: [
         new HtmlWebpackPlugin({ filename: 'index.html', template: './src/index.html' }),
-        new HtmlWebpackPlugin({ filename: 'contact.html', template: './src/contact.html' }),
+        new CopyPlugin({
+            patterns: [
+                { from: "./public/**/*", to: "./" },
+            ],
+        }),
+        new MiniCssExtractPlugin(),
     ]
 }
